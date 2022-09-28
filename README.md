@@ -1,2 +1,2 @@
-# Coin-Minter
-a basic dapp to mint coins and transact with other ethereum accounts
+# Yet-Another-NFT-Minter
+a basic dapp to mint NFT's
