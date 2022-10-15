@@ -1,8 +1,8 @@
 { 
-  "description": "This NFT proves I've created and deployed my first ERC20 smart contract on Goerli with Alchemy Road to Web3",
-  "external_url": "Alchemy.com/?a=roadtoweb3weekone",
-  "image": "https://ipfs.filebase.io/ipfs/QmTCAGTB5G5WqsZUuFf658NgMhfL8iem5xcTyBW7Tzpy7t",
-  "name": "A cool NFT", 
+  "description": "Testing my first nft app",
+  "external_url": "sahilkakwani.vercel.app",
+  "image": "https://ipfs.filebase.io/ipfs/QmZRTChmvZyZqGjADZGvx9JqFty5nghHhP5KW4zj3HRzCW",
+  "name": "A hot NFT", 
   "attributes": [
     {
       "trait_type": "Base", 

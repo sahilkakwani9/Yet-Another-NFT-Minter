@@ -2,10 +2,14 @@ import { useState } from 'preact/hooks';
 import React from 'react';
 import { ethers } from "ethers";
 import Mint from './Mint';
+import useStore from '../store/store';
 
 export default function Wallet() {
+    const state = useStore();
+    const setCurrentAccount = state.setCurrentAccount;
   const [walletConnected, setWalletConnected] = useState(false)
-  const [currentAccount, setCurrentAccount] = useState(null);
+//   const [currentAccount, setCurrentAccount] = useState(null);
+
 
 
 
@@ -22,13 +26,13 @@ export default function Wallet() {
             let provider = new ethers.providers.Web3Provider(ethereum, "any");
             let signer = provider.getSigner();
             let chaindId = await signer.getChainId();
-            if (chaindId !== 80001) {
+            if (chaindId !== 5) {
                 setWalletConnected(false)
                 signer.getChainId().then(async (res) => {
-                    if (res !== 80001) {
+                    if (res !== 5) {
                         const polygon = await ethereum.request({
                             method: 'wallet_switchEthereumChain',
-                            params: [{ chainId: "0x13881" }]
+                            params: [{ chainId: "0x5" }]
                         })
                         const accounts = await ethereum.request({
                             method: 'eth_requestAccounts',
@@ -41,7 +45,7 @@ export default function Wallet() {
                     }
                 })
             }
-            if (chaindId === 80001) {
+            if (chaindId === 5) {
                 setWalletConnected(true);
                 setCurrentAccount(getAccount[0]);
                 // state.setCurrentAccount(getAccount[0]);
